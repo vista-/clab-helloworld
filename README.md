@@ -19,7 +19,7 @@ containerlab deploy -t https://github.com/vista-/clab-helloworld
 To test the deployed topology, run a ping from `host1` to `host2`:
 
 ```
-docker exec clab-helloworld-host1 ping 10.0.0.2
+$ docker exec clab-helloworld-host1 ping 10.0.0.2
 PING 10.0.0.2 (10.0.0.2): 56 data bytes
 64 bytes from 10.0.0.2: seq=0 ttl=64 time=1.037 ms
 ```
