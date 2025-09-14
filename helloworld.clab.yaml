@@ -1,0 +1,16 @@
+name: helloworld
+
+topology:
+  nodes:
+    host1:
+      kind: linux
+      image: alpine
+      exec:
+        - ip addr add 10.0.0.1/24 dev eth1
+    host2:
+      kind: linux
+      image: alpine
+      exec:
+        - ip addr add 10.0.0.2/24 dev eth1
+  links:
+    - endpoints: [host1:eth1, host2:eth1]
